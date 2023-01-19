@@ -3,7 +3,7 @@
 @import "function";
 
 .wrap{
-    background-color: $color-bg;
+    background: $color-bg;
     width: 100%;
     overflow: hidden;
 }
@@ -18,6 +18,103 @@
             position: absolute; top: 0; left: 0;
             margin: 0; z-index: 10; width: 64px; height: 50px;
             cursor: pointer; opacity: 0;
+        }
+        .hamburger{
+            position: absolute; top: 0; left: 0; padding: 0.6rem; width: 64px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            &>div{
+                position: relative; top: 0; left: 0; background:$color-point; height: 2px; width: 60%; background-color: $color-point; transition: all 0.4s ease;
+                &::before, &::after{
+                    content: ''; position: absolute; top: -10px; width:100%; height: 2px; background: $color-point; transition: all 0.4s ease;
+                }
+                &::after{top:10px;}
+            }
+            
+        }
+    }
+
+    .logo{
+        width: 52px; height: 52px;
+        a{display: block; width: 100%; height: 100%;}
+    }
+}/*header끝*/
+
+.nav-wrap{
+    position: fixed; top: 0; left: 0; z-index: 7; width: 0%; height: 100vh;
+    transition: all 0.4s ease;
+    & > ul{ 
+        @include flex-column; align-items: flex-start;
+        position: fixed; top: 4rem; left: 24px; visibility: hidden;
+        @media screen and(min-width:768px) { top: 6rem; padding: 0 40px;}
+        @media screen and(min-width:1200px) { top: 10rem; padding: 0 60px;}
+        & > li{
+            list-style: none; padding: 0.5rem;
+            & >a{
+                position: relative; color: $color-point; text-decoration: none;
+                &::after{
+                    position: absolute; bottom: 0; left: 0;
+                    content: ""; display: block; width: 0; height: 2px; background-color: $color-point;
+                    transition: all 0.4s ease;
+                }
+            }
+        }
+    }
+}/*Nav List Wrap 끝*/
+
+/*========TOGGLE ACTIVE========*/
+.h-menu.active .hamburger > div {
+    background: rgba(0,0,0,0);
+    &::before{top:0; transform: rotate(45deg); width: 30px;}
+    &::after{top:0; transform: rotate(135deg); width: 30px;}
+}
+.nav-wrap.active{
+    width: 100%; background-color: $color-bg;
+    &>ul{
+        transition: visibility 0.4s ease; transition-delay: 0.1s; visibility: visible;
+        &>li>a:hover{
+            color: $color-bg;
+            text-shadow: -1.4px 0 $color-point, 0 1.4px $color-point, 1.4px 0 $color-point, 0 -1.4px $color-point;
+            &::after{width: 100%;}
+        }
+    }
+}
+
+.title-main{@include font-title; font-weight: 700; line-height: 1.3;}
+.title-sub{@include font-subTitle; font-weight: 600;}
+.title-deskTxt{@include font-deskBasic; font-weight: 600;}
+.title-txt{@include font-basic; font-weight: 200;}
+.title-small{@include font-small; font-weight: 200;}
+
+.container{
+    .main_visual{
+        padding: 8rem 0 8rem 0;
+        @media screen and(min-width:980px){padding-bottom: 10rem;}
+        .inner{
+            max-width{
+                @include font-bigTitle;
+                margin-bottom: 1.6rem;
+                line-height: 1.2; font-weight: 700; color:$color-main;
+            }
+            .mv_txt{@include font-basic;}
+            .visual-svg-wrap{
+                margin: 2rem auto 2.5rem auto;
+                @media screen and(min-width:860px){margin-top:-2rem;}
+            }
+        }
+    }
+}
+.section{
+    /*----section 공통스타일----*/
+    padding: 6rem 0;
+    .inner{
+        padding: 0 24px;
+        @media screen and (min-width:768px){padding: 2rem 40px;}
+        @media screen and (min-width:980px){padding: 4rem 40px;}
+        @media screen and (min-width:1200px){margin: 0 auto; padding: 6rem 60px; width:1200px; max-width:1200px;}
+        @media screen and (min-width:1400px){width:1400px; max-width: 1400px;}
+        .sc-title-wrap{
+            margin-bottom: 4rem;
+            @media screen and(min-width:768px){margin-bottom:6rem;}
         }
     }
 }
