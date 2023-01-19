@@ -1,0 +1,15 @@
+@import "reset";
+@import "interface";
+@import "function";
+
+.wrap{
+    background-color: #EFDDD1;
+    width: 100%;
+    overflow: hidden;
+}
+.header{
+    @include flex-between;
+    position:fixed; top: 0; left:0; right:0; z-index:100; padding: 0 24px; height: 4rem;
+    @media screen and(min-width:768px) {margin-bottom:3.2rem; padding:0 40px;}
+    @media screen and(min-width:1200px) {margin-bottom: 4rem; heigth: 5.4rem;}
+}
