@@ -557,7 +557,12 @@ button {
     padding-bottom: 10rem;
   }
 }
-.container .main_visual .inner max-width {
+.container .main_visual .inner {
+  max-width: 1400px;
+  margin: auto;
+  text-align: center;
+}
+.container .main_visual .inner .mv_title {
   font-size: 42px;
   margin-bottom: 1.6rem;
   line-height: 1.2;
@@ -565,12 +570,12 @@ button {
   color: #0a34a2;
 }
 @media screen and (min-width: 768px) {
-  .container .main_visual .inner max-width {
+  .container .main_visual .inner .mv_title {
     font-size: 5.4688vw;
   }
 }
 @media screen and (min-width: 1200px) {
-  .container .main_visual .inner max-width {
+  .container .main_visual .inner .mv_title {
     font-size: 76px;
   }
 }
