@@ -609,6 +609,7 @@ button {
 .section {
   /*----section 공통스타일----*/
   padding: 6rem 0;
+  /*-----------Work Experience 영역-----------*/
 }
 .section .inner {
   padding: 0 24px;
@@ -644,4 +645,62 @@ button {
   .section .inner .sc-title-wrap {
     margin-bottom: 6rem;
   }
+}
+@media screen and (min-width: 980px) {
+  .section.section-work-wrap .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+.section.section-work-wrap .inner .sc-title-wrap .sc-title-top {
+  margin-bottom: 2rem;
+}
+.section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom {
+  display: flex;
+  align-items: center;
+  align-items: flex-end;
+}
+.section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .text-wrap .title-deskTxt {
+  font-weight: 600;
+}
+.section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .text-wrap .title-deskTxt span {
+  margin-left: 6px;
+  margin-bottom: 2px;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #0a34a2;
+  vertical-align: text-bottom;
+}
+@media screen and (max-width: 979px) {
+  .section.section-work-wrap .inner .sc-title-wrap {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .text-wrap .title-deskTxt {
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+  .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .text-wrap .title-txt {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 980px) {
+  .section.section-work-wrap .inner .sc-conts-wrap {
+    width: 50%;
+    transition-delay: 0.4s;
+  }
+}
+.section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list {
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid #0a34a2;
 }/*# sourceMappingURL=index.css.map */

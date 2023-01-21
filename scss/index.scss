@@ -118,4 +118,45 @@
             @media screen and(min-width:768px){margin-bottom:6rem;}
         }
     }
+    /*-----------Work Experience 영역-----------*/
+    &.section-work-wrap{
+        .inner{
+            @media screen and(min-width:980px) {
+                @include flex-between; align-items: baseline;
+            }
+            .sc-title-wrap{
+                .sc-title-top{margin-bottom:2rem;}
+                .sc-title-bottom{
+                    @include flex; align-items: flex-end;
+                    .text-wrap{
+                        .title-deskTxt{font-weight: 600;
+                            span{margin-left: 6px; margin-bottom: 2px; display: inline-block; width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: $color-main; vertical-align: text-bottom;}
+                        }
+                    }
+                }
+                @media screen and(max-width:979px) {
+                    margin-bottom: 3rem; text-align: center;
+                    .sc-title-bottom{
+                        @include flex-column; align-items: center;
+                        .text-wrap{
+                            .title-deskTxt{text-align: center; margin-bottom: 0.2rem;}
+                            .title-txt{text-align: center;}
+                        }
+                    }
+                }
+            }
+            .sc-conts-wrap{
+                @media screen and(min-width:980px){
+                    width:50%;
+                    transition-delay: 0.4s;
+                }
+                .work-list-wrap{
+                    .work-list{
+                        padding-bottom: 1.4rem; border-bottom: 1px solid $color-main;
+                    }
+                }
+            }
+        }
+    }
 }
+
