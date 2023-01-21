@@ -153,6 +153,22 @@
                 .work-list-wrap{
                     .work-list{
                         padding-bottom: 1.4rem; border-bottom: 1px solid $color-main;
+                        margin-bottom: 2rem;
+                        .work-title{margin-bottom:1.4rem;}
+                        .menu{
+                            .list{@include flex-between; margin-bottom: 1.4rem; align-items: baseline;
+                            @media screen and (min-width:980px){margin-bottom: 0.6rem;}
+                            .name{
+                                &>p:nth-child(1){font-size: 14px; font-weight: 500;}
+                                &>p:nth-child(2){font-size: 13px; font-weight: 300;}
+                                @media screen and(min-width:980px){
+                                    @include flex;
+                                    &>p:nth-child(2){margin-left: 0.4rem;}
+                                    }
+                                }
+                                .date{font-size: 13px; font-weight: 500;}
+                            }
+                        }
                     }
                 }
             }
