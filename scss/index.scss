@@ -129,9 +129,7 @@
                 .sc-title-bottom{
                     @include flex; align-items: flex-end;
                     .text-wrap{
-                        .title-deskTxt{font-weight: 600;
-                            // span{margin-left: 6px; margin-bottom: 2px; display: inline-block; width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: $color-main; vertical-align: text-bottom;}
-                        }
+                        .title-deskTxt{font-weight: 600;}
                     }
                 }
                 @media screen and(max-width:979px) {
