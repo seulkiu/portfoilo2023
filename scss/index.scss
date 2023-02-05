@@ -152,6 +152,7 @@
                     .work-list{
                         padding-bottom: 1.4rem; border-bottom: 1px solid $color-main;
                         margin-bottom: 2rem;
+                        &:nth-child(3){border-bottom: 0px;}
                         .work-title{margin-bottom:1.4rem;}
                         .menu{
                             .list{@include flex-between; margin-bottom: 1.4rem; align-items: baseline;
@@ -172,9 +173,15 @@
             }
         }
     }
+    &.section-portfolio-wrap{
+        background-color: #F2F1ED;
+    }
 }
 
 .footer{
     padding: 3rem 0;
     background-color: $color-main;
+    .inner{
+        padding: 0 24px;
+    }
 }
